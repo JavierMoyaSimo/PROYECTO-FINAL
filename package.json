@@ -1,0 +1,30 @@
+{
+  "name": "proyecto-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JavierMoyaSimo/PROYECTO-FINAL.git"
+  },
+  "author": "Javier Moya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JavierMoyaSimo/PROYECTO-FINAL/issues"
+  },
+  "homepage": "https://github.com/JavierMoyaSimo/PROYECTO-FINAL#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.20",
+    "sequelize": "^6.28.0",
+    "sequelize-cli": "^6.5.2"
+  }
+}
