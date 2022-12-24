@@ -14,7 +14,12 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   ring.init({
-    ring_id: DataTypes.INTEGER,
+    ring_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
+    },
     name: DataTypes.STRING,
     type: DataTypes.STRING,
     state: DataTypes.STRING,
@@ -23,6 +28,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'ring',
+    timestamps: false,
   });
   return ring;
 };

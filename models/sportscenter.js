@@ -14,7 +14,12 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   sportscenter.init({
-    sportscenter_id: DataTypes.INTEGER,
+    sportscenter_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
+    },
     name: DataTypes.STRING,
     phone: DataTypes.STRING,
     address: DataTypes.STRING,
@@ -24,6 +29,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'sportscenter',
+    timestamps: false,
   });
   return sportscenter;
 };

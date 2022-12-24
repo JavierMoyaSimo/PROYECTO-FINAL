@@ -14,11 +14,17 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   booking.init({
-    booking_id: DataTypes.INTEGER,
+    booking_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
+    },
     date: DataTypes.DATE
   }, {
     sequelize,
     modelName: 'booking',
+    timestamps: false,
   });
   return booking;
 };
