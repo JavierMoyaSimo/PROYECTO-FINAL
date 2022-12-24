@@ -24,7 +24,14 @@ module.exports = {
       players: {
         type: Sequelize.INTEGER
       },
-      
+      sportscenter_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: "sportscenter",
+          key: "sportscenter_id",
+        },
+      },
     });
   },
   async down(queryInterface, Sequelize) {

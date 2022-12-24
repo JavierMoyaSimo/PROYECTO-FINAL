@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      ring.belongsTo(models.sportscenter);
     }
   }
   ring.init({
@@ -24,7 +25,15 @@ module.exports = (sequelize, DataTypes) => {
     type: DataTypes.STRING,
     state: DataTypes.STRING,
     timetable: DataTypes.STRING,
-    players: DataTypes.INTEGER
+    players: DataTypes.INTEGER,
+    sportscenter_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: "sportscenter",
+        key: "sportscenter_id",
+      },
+    },
   }, {
     sequelize,
     modelName: 'ring',
