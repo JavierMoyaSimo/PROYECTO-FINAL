@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       ring.belongsTo(models.sportscenter);
+      ring.hasMany(models.booking);
     }
   }
   ring.init({

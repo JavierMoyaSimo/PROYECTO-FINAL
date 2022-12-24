@@ -12,6 +12,22 @@ module.exports = {
       date: {
         type: Sequelize.DATE
       },
+      ring_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: "ring",
+          key: "ring_id",
+        },
+      },
+      user_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: "user",
+          key: "user_id",
+        },
+      },
     });
   },
   async down(queryInterface, Sequelize) {
