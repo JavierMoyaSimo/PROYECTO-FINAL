@@ -22,7 +22,6 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true,
       primaryKey: true,
     },
-    date: DataTypes.DATE,
     game_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
