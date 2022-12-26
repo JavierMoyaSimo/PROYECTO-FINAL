@@ -22,11 +22,12 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
     },
     name: DataTypes.STRING,
+    description: DataTypes.STRING,
     phone: DataTypes.STRING,
     address: DataTypes.STRING,
     province: DataTypes.STRING,
     rings: DataTypes.INTEGER,
-    timetable: DataTypes.DATE
+    timetable: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'sportscenters',

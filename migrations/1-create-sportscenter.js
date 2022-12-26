@@ -12,6 +12,9 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
+      description: {
+        type: Sequelize.STRING
+      },
       phone: {
         type: Sequelize.STRING
       },
@@ -25,7 +28,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       timetable: {
-        type: Sequelize.DATE
+        type: Sequelize.STRING
       },
       // onDelete: 'cascade',
       // onUpdate: 'cascade'
