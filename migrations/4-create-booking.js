@@ -16,7 +16,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: "game",
+          model: "games",
           key: "game_id",
         },
       },
@@ -24,7 +24,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: "user",
+          model: "users",
           key: "user_id",
         },
       },
