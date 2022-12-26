@@ -12,6 +12,7 @@ module.exports = {
         phone: "777222333",
         role: "admin",
         dni: "",
+        level: "",
       }, {
         name: "user1",
         email: "user1@gmail.com",
@@ -19,6 +20,7 @@ module.exports = {
         phone: "667777666",
         role: "user",
         dni: "",
+        level: "",
 
       }, {
         name: "user2",
@@ -27,6 +29,7 @@ module.exports = {
         phone: "777222333",
         role: "user",
         dni: "",
+        level: "",
 
       }, {
         name: "user3",
@@ -35,6 +38,7 @@ module.exports = {
         phone: "777222333",
         role: "user",
         dni: "",
+        level: "",
 
       }, {
         name: "user4",
@@ -43,6 +47,7 @@ module.exports = {
         phone: "777222333",
         role: "user",
         dni: "",
+        level: "",
 
       },
 

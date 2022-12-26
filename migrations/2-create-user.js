@@ -27,6 +27,9 @@ module.exports = {
       dni: {
         type: Sequelize.STRING
       },
+      level: {
+        type: Sequelize.INTEGER
+      },
       // onDelete: 'cascade',
       // onUpdate: 'cascade'      
     });

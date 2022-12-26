@@ -25,6 +25,7 @@ module.exports = (sequelize, DataTypes) => {
     type: DataTypes.STRING,
     players: DataTypes.INTEGER,
     date: DataTypes.DATE,
+    level: DataTypes.INTEGER,
     sportscenter_id: {
       type: DataTypes.INTEGER,
       allowNull: false,

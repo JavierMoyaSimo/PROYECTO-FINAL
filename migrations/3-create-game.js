@@ -18,6 +18,9 @@ module.exports = {
       date: {
         type: Sequelize.DATE
       },
+      level: {
+        type: Sequelize.INTEGER
+      },
       sportscenter_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
