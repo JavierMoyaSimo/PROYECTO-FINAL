@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      sportscenter.hasMany(models.ring)
+      sportscenter.hasMany(models.game)
     }
   }
   sportscenter.init({

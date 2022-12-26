@@ -12,12 +12,12 @@ module.exports = {
       date: {
         type: Sequelize.DATE
       },
-      ring_id: {
+      game_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: "ring",
-          key: "ring_id",
+          model: "game",
+          key: "game_id",
         },
       },
       user_id: {

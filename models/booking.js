@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      booking.belongsTo(models.ring);
+      booking.belongsTo(models.game);
       booking.belongsTo(models.user);
     }
   }
@@ -23,12 +23,12 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
     },
     date: DataTypes.DATE,
-    ring_id: {
+    game_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "ring",
-        key: "ring_id",
+        model: "game",
+        key: "game_id",
       },
     },
     user_id: {

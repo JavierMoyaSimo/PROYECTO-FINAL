@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class ring extends Model {
+  class game extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,22 +11,22 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      ring.belongsTo(models.sportscenter);
-      ring.hasMany(models.booking);
+      game.belongsTo(models.sportscenter);
+      game.hasMany(models.booking);
     }
   }
-  ring.init({
-    ring_id: {
+  game.init({
+    game_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
     },
-    name: DataTypes.STRING,
     type: DataTypes.STRING,
-    state: DataTypes.STRING,
+    teamOne: DataTypes.STRING,
+    teamTwo: DataTypes.STRING,
+    date: DataTypes.DATE,
     timetable: DataTypes.STRING,
-    players: DataTypes.INTEGER,
     sportscenter_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -37,8 +37,8 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {
     sequelize,
-    modelName: 'ring',
+    modelName: 'game',
     timestamps: false,
   });
-  return ring;
+  return game;
 };
