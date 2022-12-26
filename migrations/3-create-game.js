@@ -32,6 +32,8 @@ module.exports = {
           key: "sportscenter_id",
         },
       },
+      // onDelete: 'cascade',
+      // onUpdate: 'cascade'
     });
   },
   async down(queryInterface, Sequelize) {

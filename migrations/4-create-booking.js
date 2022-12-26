@@ -28,6 +28,8 @@ module.exports = {
           key: "user_id",
         },
       },
+      // onDelete: 'cascade',
+      // onUpdate: 'cascade'
     });
   },
   async down(queryInterface, Sequelize) {

@@ -27,6 +27,8 @@ module.exports = {
       timetable: {
         type: Sequelize.DATE
       },
+      // onDelete: 'cascade',
+      // onUpdate: 'cascade'
     });
   },
   async down(queryInterface, Sequelize) {

@@ -23,7 +23,9 @@ module.exports = {
       },
       role: {
         type: Sequelize.STRING
-      }      
+      },
+      // onDelete: 'cascade',
+      // onUpdate: 'cascade'      
     });
   },
   async down(queryInterface, Sequelize) {

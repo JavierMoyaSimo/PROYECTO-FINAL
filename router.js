@@ -3,7 +3,7 @@ const router = express.Router();
 
 const UserRoutes = require("./views/UserRoutes");
 const SportscenterRoutes = require("./views/SportscenterRoutes");
-const RingRoutes = require("./views/RingRoutes");
+const GameRoutes = require("./views/GameRoutes");
 const BookingRoutes = require("./views/BookingRoutes");
 
 // const AuthRoutes = require("./views/authRoutes");
@@ -16,8 +16,8 @@ const BookingRoutes = require("./views/BookingRoutes");
 router.use("/users", UserRoutes);
 //middleware para las rutas de sportscenters
 router.use("/sportscenters", SportscenterRoutes);
-//middleware para las rutas de rings
-router.use("/rings", RingRoutes);
+//middleware para las rutas de games
+router.use("/rings", GameRoutes);
 //middleware para las rutas de bookings
 router.use("/bookings", BookingRoutes);
 
