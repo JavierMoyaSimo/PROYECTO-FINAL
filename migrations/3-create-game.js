@@ -18,9 +18,6 @@ module.exports = {
       date: {
         type: Sequelize.DATE
       },
-      timetable: {
-        type: Sequelize.STRING
-      },
       sportscenter_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
