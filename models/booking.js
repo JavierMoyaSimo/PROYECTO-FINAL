@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class booking extends Model {
+  class bookings extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,11 +11,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      booking.belongsTo(models.game);
-      booking.belongsTo(models.user);
+      bookings.belongsTo(models.games);
+      bookings.belongsTo(models.users);
     }
   }
-  booking.init({
+  bookings.init({
     booking_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "game",
+        model: "games",
         key: "game_id",
       },
     },
@@ -35,14 +35,15 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "user",
+        model: "users",
         key: "user_id",
       },
     },
   }, {
     sequelize,
-    modelName: 'booking',
+    modelName: 'bookings',
     timestamps: false,
+    freezeTableName: true
   });
-  return booking;
+  return bookings;
 };
