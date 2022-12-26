@@ -12,11 +12,8 @@ module.exports = {
       type: {
         type: Sequelize.STRING
       },
-      teamOne: {
-        type: Sequelize.STRING
-      },
-      teamTwo: {
-        type: Sequelize.STRING
+      players: {
+        type: Sequelize.INTEGER
       },
       date: {
         type: Sequelize.DATE

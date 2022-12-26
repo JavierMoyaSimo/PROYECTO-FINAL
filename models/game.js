@@ -23,8 +23,7 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
     },
     type: DataTypes.STRING,
-    teamOne: DataTypes.STRING,
-    teamTwo: DataTypes.STRING,
+    players: DataTypes.INTEGER,
     date: DataTypes.DATE,
     timetable: DataTypes.STRING,
     sportscenter_id: {

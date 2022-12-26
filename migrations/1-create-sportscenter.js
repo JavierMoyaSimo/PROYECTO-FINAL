@@ -30,6 +30,9 @@ module.exports = {
       timetable: {
         type: Sequelize.STRING
       },
+      dni: {
+        type: Sequelize.STRING
+      },
       // onDelete: 'cascade',
       // onUpdate: 'cascade'
     });

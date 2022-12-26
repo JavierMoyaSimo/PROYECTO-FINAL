@@ -24,6 +24,9 @@ module.exports = {
       role: {
         type: Sequelize.STRING
       },
+      dni: {
+        type: Sequelize.STRING
+      },
       // onDelete: 'cascade',
       // onUpdate: 'cascade'      
     });
