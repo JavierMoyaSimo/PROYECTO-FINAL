@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       users.hasMany(models.bookings);
+      users.belongsTo(models.roles);
     }
   }
   users.init({
@@ -25,7 +26,14 @@ module.exports = (sequelize, DataTypes) => {
     email: DataTypes.STRING,
     password: DataTypes.STRING,
     phone: DataTypes.STRING,
-    role: DataTypes.STRING,
+    role: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      references: {
+        model: "roles",
+        key: "role_id",
+      },
+    },
     dni: DataTypes.STRING,
     level: DataTypes.INTEGER
   }, {

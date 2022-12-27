@@ -41,11 +41,11 @@ module.exports = {
         level: "",
 
       }, {
-        name: "user4",
-        email: "user4@gmail.com",
+        name: "sportscenteruser4",
+        email: "sportscenteruser4@gmail.com",
         password: "FGFtB7/d4nWUvZVznuX99t18pYNkAqOU+20VGcYACGv2o+jsijjFQZar9ApIjR7T6fvwIoq5chS5VW4hKbYKNQ==",
         phone: "777222333",
-        role: "user",
+        role: "sportscenteradmin",
         dni: "",
         level: "",
 

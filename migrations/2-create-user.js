@@ -22,7 +22,11 @@ module.exports = {
         type: Sequelize.STRING
       },
       role: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        references: {
+          model: 'roles',
+          key: 'role_id'
+        }
       },
       dni: {
         type: Sequelize.STRING
