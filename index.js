@@ -5,6 +5,8 @@ const app = express();
 const router = require("./router");
 const cors = require("cors");
 
+const PORT = 3001;
+
 app.use(cors());
 //SALTARSE POLITICA CORS DE GOOGLE CHROME PARA PRUEBAS LOCALES CON EL FRONTED
 app.use((req, res, next) => {

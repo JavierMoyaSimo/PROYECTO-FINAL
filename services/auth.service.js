@@ -56,7 +56,7 @@ const createUser = async (userBody) => {
     email: userBody.email,
     password: userBody.password,
     phone:userBody.phone,
-    role: userBody.role,
+    roleId: userBody.roleId,
     dni: userBody.dni,
     level:userBody.level      
     
