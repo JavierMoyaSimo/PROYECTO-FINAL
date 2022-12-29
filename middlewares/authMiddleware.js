@@ -20,8 +20,8 @@ const authBearerMiddleware = async (req, res, next) => {
 
 }
 
-const isValidRole = (roleId) => (req, res, next) => {
-  if (req.auth?.roleId === roleId) {
+const isValidRole = (roleRoleId) => (req, res, next) => {
+  if (req.auth?.roleRoleId === roleRoleId) {
     
     next()
   } else {
