@@ -5,13 +5,11 @@ const UserRoutes = require("./views/UserRoutes");
 const SportscenterRoutes = require("./views/SportscenterRoutes");
 const GameRoutes = require("./views/GameRoutes");
 const BookingRoutes = require("./views/BookingRoutes");
-
-// const AuthRoutes = require("./views/authRoutes");
+const AuthRoutes = require("./views/AuthRoutes");
 // const { authBearerMiddleware } = require("./middlewares/authMiddleware");
 
 //middleware para las rutas de auth
-// router.use("/auth", AuthRoutes);
-
+router.use("/auth", AuthRoutes);
 //middleware para las rutas de user
 router.use("/users", UserRoutes);
 //middleware para las rutas de sportscenters
