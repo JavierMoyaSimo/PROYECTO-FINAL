@@ -11,16 +11,16 @@ module.exports = {
         password: "mTcCYB2HnDJc3eMPwKyxZecFFmIo9gtwjHuS7MqWoMsAlldWuDMIlpEKwTqEb4xQqw2DeqxLbRhvC6v/YKyIkg==",
         phone: "777222333",
         role: "admin",
-        dni: "",
-        level: "",
+        dni: "11122233A",
+        level: "0",
       }, {
         name: "user1",
         email: "user1@gmail.com",
         password: "FGFtB7/d4nWUvZVznuX99t18pYNkAqOU+20VGcYACGv2o+jsijjFQZar9ApIjR7T6fvwIoq5chS5VW4hKbYKNQ==",
         phone: "667777666",
         role: "user",
-        dni: "",
-        level: "",
+        dni: "44527961X",
+        level: "1",
 
       }, {
         name: "user2",
@@ -28,8 +28,8 @@ module.exports = {
         password: "FGFtB7/d4nWUvZVznuX99t18pYNkAqOU+20VGcYACGv2o+jsijjFQZar9ApIjR7T6fvwIoq5chS5VW4hKbYKNQ==",
         phone: "777222333",
         role: "user",
-        dni: "",
-        level: "",
+        dni: "44527960K",
+        level: "2",
 
       }, {
         name: "user3",
@@ -37,8 +37,8 @@ module.exports = {
         password: "FGFtB7/d4nWUvZVznuX99t18pYNkAqOU+20VGcYACGv2o+jsijjFQZar9ApIjR7T6fvwIoq5chS5VW4hKbYKNQ==",
         phone: "777222333",
         role: "user",
-        dni: "",
-        level: "",
+        dni: "44527963L",
+        level: "3",
 
       }, {
         name: "sportscenteruser4",
@@ -46,8 +46,8 @@ module.exports = {
         password: "FGFtB7/d4nWUvZVznuX99t18pYNkAqOU+20VGcYACGv2o+jsijjFQZar9ApIjR7T6fvwIoq5chS5VW4hKbYKNQ==",
         phone: "777222333",
         role: "sportscenteradmin",
-        dni: "",
-        level: "",
+        dni: "12345678S",
+        level: "0",
 
       },
 
