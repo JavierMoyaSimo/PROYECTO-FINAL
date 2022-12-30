@@ -39,7 +39,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    sportscenter_id: {
+    sportscenterSportscenterId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {

@@ -26,7 +26,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER
       },
-      sportscenter_id: {
+      sportscenterSportscenterId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {

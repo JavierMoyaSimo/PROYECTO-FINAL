@@ -14,11 +14,10 @@ router.use("/auth", AuthRoutes);
 router.use("/sportscenters", SportscenterRoutes);
 //middleware para las rutas de authBarer
 router.use(authBearerMiddleware);
-// //middleware para las rutas de user
+//middleware para las rutas de user
 router.use("/users", UserRoutes);
-
-// //middleware para las rutas de games
-// router.use("/games", GameRoutes);
+//middleware para las rutas de games
+router.use("/games", GameRoutes);
 // //middleware para las rutas de bookings
 // router.use("/bookings", BookingRoutes);
 
