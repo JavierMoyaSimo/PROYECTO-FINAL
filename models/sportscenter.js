@@ -21,14 +21,37 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true,
       primaryKey: true,
     },
-    name: DataTypes.STRING,
-    description: DataTypes.TEXT,
-    phone: DataTypes.STRING,
-    address: DataTypes.STRING,
-    province: DataTypes.STRING,
-    rings: DataTypes.INTEGER,
-    timetable: DataTypes.STRING,
-    dni: DataTypes.STRING
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    description: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    phone: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    address: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    province: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    rings: {
+      type: DataTypes.INTEGER,
+      allowNull: false,},
+    timetable: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    dni: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   }, {
     sequelize,
     modelName: 'sportscenters',

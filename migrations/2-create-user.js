@@ -10,15 +10,19 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       email: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       password: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       phone: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       roleRoleId: {
@@ -29,9 +33,11 @@ module.exports = {
         }
       },
       dni: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       level: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       // onDelete: 'cascade',

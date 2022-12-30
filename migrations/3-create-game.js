@@ -10,15 +10,19 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       type: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       players: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       date: {
+        allowNull: false,
         type: Sequelize.DATE
       },
       level: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       sportscenter_id: {

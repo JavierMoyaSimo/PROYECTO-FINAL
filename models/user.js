@@ -22,10 +22,22 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true,
       primaryKey: true,
     },
-    name: DataTypes.STRING,
-    email: DataTypes.STRING,
-    password: DataTypes.STRING,
-    phone: DataTypes.STRING,
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    phone: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     roleRoleId: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -34,8 +46,14 @@ module.exports = (sequelize, DataTypes) => {
         key: "role_id",
       },
     },
-    dni: DataTypes.STRING,
-    level: DataTypes.INTEGER
+    dni: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    level: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   }, {
     sequelize,
     modelName: 'users',

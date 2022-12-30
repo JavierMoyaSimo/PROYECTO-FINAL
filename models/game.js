@@ -22,10 +22,22 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true,
       primaryKey: true,
     },
-    type: DataTypes.STRING,
-    players: DataTypes.INTEGER,
-    date: DataTypes.DATE,
-    level: DataTypes.INTEGER,
+    type: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    players: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    date: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
+    level: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
     sportscenter_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
