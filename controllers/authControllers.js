@@ -34,12 +34,22 @@ const authRegisterController = async (req, res) => {
     } catch (error) {
         console.error(error);
         res.status(400).json({
-            message: "Email is already registered: "});
+            message: "Email is already registered: "
+        });
         return;
     }
     // save user
     try {
-        const UserCreated = await createUser(body);
+        const UserCreated = await createUser({
+            name: body.name,
+            email: body.email,
+            password: body.password,
+            phone: body.phone,
+            roleRoleId: body.roleRoleId || "user",
+            dni: body.dni,
+            level: body.level,          
+            
+        });
         res.status(201).json(UserCreated)
     } catch (error) {
         console.error(error)
@@ -71,8 +81,11 @@ const authLoginController = async (req, res) => {
         }
 
         const jwt = jsonwebtoken.sign({
-            email: userFound.email,
             user_id: userFound.user_id,
+            name: userFound.name,
+            email: userFound.email,
+            dni: userFound.dni,
+            level: userFound.level,
             roleRoleId: userFound.roleRoleId.toLowerCase()
         }, secret);
         res.status(200).json({
