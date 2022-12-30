@@ -89,7 +89,15 @@ const authLoginController = async (req, res) => {
             roleRoleId: userFound.roleRoleId.toLowerCase()
         }, secret);
         res.status(200).json({
-            message: "Login successful", jwt: jwt
+            message: "Login successful", 
+            jwt: jwt,
+            user_id: userFound.user_id,
+            name: userFound.name,
+            email: userFound.email,
+            dni: userFound.dni,
+            level: userFound.level,
+            roleRoleId: userFound.roleRoleId
+
         })
     } catch (error) {
         res.send(error)

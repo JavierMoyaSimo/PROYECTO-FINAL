@@ -12,20 +12,27 @@ const authBearerMiddleware = async (req, res, next) => {
 
     const payload = jsonwebtoken.verify(jwt, process.env.JWT_SECRET)
     req.auth = payload;
+    console.log(req.auth, "eldearribadsdsdsdsdsdsdsd")
     next();
   } catch (error) {
-    res.status(401).json({ message: "You are not authenticated." });
+    res.status(401).json({ message: "You are not authenticated.1" });
     return;
   }
 
 }
 
 const isValidRole = (roleRoleId) => (req, res, next) => {
+  console.log(req.auth, "esto es simplemente el auth")
   if (req.auth?.roleRoleId === roleRoleId) {
     
     next()
   } else {
-    res.status(403).json({ message: "You are not authorized" })
+    res.status(403).json({ message: "You are not authorized2" })
+    
+    console.log(roleRoleId, "Este es el rolRoleId")
+    // console.log(payload, "esteespayload")
+    console.log(req.auth?.roleRoleId, "Este es el del auth")
+    
   }
 }
 
@@ -36,7 +43,7 @@ const isValidUser = (email) => async (req, res, next) => {
   if (req.auth?.email === email) {
     next()
   } else {
-    res.status(403).json({ message: "You are not authorized" })
+    res.status(403).json({ message: "You are not authorized3" })
   }
 }
 
