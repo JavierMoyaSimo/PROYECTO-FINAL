@@ -27,6 +27,6 @@ router.delete( "/deleteUser/:email",  isValidRole("admin"),  userController.dele
 router.post('/newSportscenter', isValidRole("admin"), userController.postNewSportscenter);
 
 // BORRAR SPORTSCENTER
-router.delete('/deleteSportscenter/:name', userController.deleteSportscenter);
+router.delete('/deleteSportscenter/:name', isValidRole("admin"), userController.deleteSportscenter);
 
 module.exports = router;
