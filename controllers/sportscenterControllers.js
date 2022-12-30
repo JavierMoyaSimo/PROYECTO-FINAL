@@ -42,24 +42,4 @@ sportscenterController.getSportscentersByProvince = async (req, res) => {
 
 
 
-
-// ELIMINAR UN SPORTSCENTER
-sportscenterController.deleteSportscenter = async (req, res) => {
-    try{
-        let name = req.params.name
-        let resp = await models.sportscenters.destroy({
-            where: { name: name }
-        })
-
-        if(resp == 1) {
-            res.send("Se ha eliminado el sportscenter correctamente")
-        } else {
-            res.send("No se ha podido eliminar el sportscenter")
-        }
-
-    } catch(err) {
-
-    }
-}
-
 module.exports = sportscenterController

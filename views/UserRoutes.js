@@ -21,12 +21,12 @@ router.get("/user/:email", isValidUser(), userController.getUserByMail);
 router.put("/updateUser/:email", isValidUser(), userController.updateUser);
 
 //BORRAR UN USUARIO(solo puede hacerlo el admin)
-router.delete(
-  "/deleteUser/:email",
-  isValidRole("admin"),
-  userController.deleteUser
-);
+router.delete( "/deleteUser/:email",  isValidRole("admin"),  userController.deleteUser);
+
 // REGISTAR NUEVO SPORTSCENTERS
-router.post('/newSportscenter', isValidRole("sportscenteradmin"), userController.postNewSportscenter);
+router.post('/newSportscenter', isValidRole("admin"), userController.postNewSportscenter);
+
+// BORRAR SPORTSCENTER
+router.delete('/deleteSportscenter/:name', userController.deleteSportscenter);
 
 module.exports = router;

@@ -61,7 +61,6 @@ userController.updateUser = async (req, res) => {
 };
 
 //BORRAR UN USUARIO(solo puede hacerlo el admin)
-
 userController.deleteUser = async (req, res) => {
   try {
     let { email } = req.params;
@@ -72,7 +71,8 @@ userController.deleteUser = async (req, res) => {
   } catch (err) {}
 };
 
-// REGISTRAR NUEVO SPORTCENTER
+
+// REGISTRAR NUEVO SPORTCENTER(solo puede hacerlo el admin)
 userController.postNewSportscenter = async (req, res) => {
     try {
         let data = req.body
@@ -99,4 +99,26 @@ userController.postNewSportscenter = async (req, res) => {
         res.send(err)
     }
 }
+
+
+// ELIMINAR UN SPORTSCENTER(solo puede hacerlo el admin)
+userController.deleteSportscenter = async (req, res) => {
+    try{
+        let name = req.params.name
+        let resp = await models.sportscenters.destroy({
+            where: { name: name }
+        })
+
+        if(resp == 1) {
+            res.send("Se ha eliminado el sportscenter correctamente")
+        } else {
+            res.send("No se ha podido eliminar el sportscenter")
+        }
+
+    } catch(err) {
+
+    }
+}
+
+
 module.exports = userController;
