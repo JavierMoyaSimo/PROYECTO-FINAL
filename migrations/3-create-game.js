@@ -15,6 +15,7 @@ module.exports = {
       },
       players: {
         allowNull: false,
+        max: 4,
         type: Sequelize.INTEGER
       },
       date: {

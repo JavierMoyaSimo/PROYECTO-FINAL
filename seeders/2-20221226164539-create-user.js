@@ -6,12 +6,12 @@ module.exports = {
 
     await queryInterface.bulkInsert('users', [
       {
-        name: "USERADMIN",
-        email: "admin@gmail.com",
-        password: "mTcCYB2HnDJc3eMPwKyxZecFFmIo9gtwjHuS7MqWoMsAlldWuDMIlpEKwTqEb4xQqw2DeqxLbRhvC6v/YKyIkg==",
-        phone: "777222333",
+        name: "Piwi",
+        email: "piwimoya@gmail.com",
+        password: "VrRopLekvEzv56DMSvCWyiwuNxlAxD2kfTmsr29YWIfHS2x17/RrJXx485IDzt8EJixPHFyS/S4hiMB/XK2EPA==",
+        phone: "652835196",
         roleRoleId: "admin",
-        dni: "11122233A",
+        dni: "44527964X",
         level: "0",
       }, {
         name: "user1",

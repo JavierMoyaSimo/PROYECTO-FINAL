@@ -11,7 +11,8 @@ module.exports = {
       },
       name: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        unique: true,
       },
       description: {
         allowNull: false,
@@ -39,7 +40,8 @@ module.exports = {
       },
       dni: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        unique: true
       },
       // onDelete: 'cascade',
       // onUpdate: 'cascade'

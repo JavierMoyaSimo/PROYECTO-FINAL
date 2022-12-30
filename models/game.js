@@ -29,6 +29,7 @@ module.exports = (sequelize, DataTypes) => {
     players: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      max: 4,
     },
     date: {
       type: DataTypes.DATE,
