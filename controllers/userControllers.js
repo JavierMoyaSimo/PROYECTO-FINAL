@@ -72,4 +72,31 @@ userController.deleteUser = async (req, res) => {
   } catch (err) {}
 };
 
+// REGISTRAR NUEVO SPORTCENTER
+userController.postNewSportscenter = async (req, res) => {
+    try {
+        let data = req.body
+        let resp = await models.sportscenters.create({
+            name: data.name,
+            description: data.description,
+            phone: data.phone,
+            address: data.address,
+            province: data.province,
+            rings: data.rings,
+            timetable: data.timetable,
+            dni: data.dni
+
+        })
+
+        if (resp ) {
+            res.send("Se ha registrado el sportscenter correctamente")
+        } else {
+            res.send("No se ha podido registar el sportscenter")
+            console.log(resp, "Soy la respuesta")
+        }
+
+    } catch (err) {
+        res.send(err)
+    }
+}
 module.exports = userController;

@@ -26,5 +26,7 @@ router.delete(
   isValidRole("admin"),
   userController.deleteUser
 );
+// REGISTAR NUEVO SPORTSCENTERS
+router.post('/newSportscenter', isValidRole("sportscenteradmin"), userController.postNewSportscenter);
 
 module.exports = router;

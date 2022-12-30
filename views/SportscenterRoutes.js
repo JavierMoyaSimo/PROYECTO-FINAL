@@ -18,14 +18,11 @@ router.get("/id/:sportscenter_id", sportscenterController.getsportcenterById);
 //  SPORTSCENTERS SEGUN SU PROVINCIA
 router.get("/province/:province", sportscenterController.getSportscentersByProvince);
 
-// SPORTSCENTERS SEGUN SU GENERO
-// router.get("/genre/:genre", sportscenterController.getMoviesByGenre);
 
-//  // REGISTAR NUEVA SPORTSCENTERS
-router.post('/newSportscenter', sportscenterController.postNewSportscenter);
+
    
 // // BORRAR SPORTSCENTERS
-// router.delete('/deleteMovie/:title', sportscenterController.deleteMovie);
+router.delete('/deleteSportscenter/:name', sportscenterController.deleteSportscenter);
   
 
 
