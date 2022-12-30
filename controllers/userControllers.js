@@ -5,8 +5,7 @@ const userController = {};
 const { encryptPassword } = require("../services/auth.service");
 require("dotenv").config();
 
-//Get All Users
-
+//MOSTRAR TODOS LOS USUARIOS
 userController.getUsers = async (req, res) => {
   try {
     models.users.findAll().then((resp) => {
@@ -72,53 +71,10 @@ userController.deleteUser = async (req, res) => {
 };
 
 
-// REGISTRAR NUEVO SPORTCENTER(solo puede hacerlo el admin)
-userController.postNewSportscenter = async (req, res) => {
-    try {
-        let data = req.body
-        let resp = await models.sportscenters.create({
-            name: data.name,
-            description: data.description,
-            phone: data.phone,
-            address: data.address,
-            province: data.province,
-            rings: data.rings,
-            timetable: data.timetable,
-            dni: data.dni
-
-        })
-
-        if (resp ) {
-            res.send("Se ha registrado el sportscenter correctamente")
-        } else {
-            res.send("No se ha podido registar el sportscenter")
-            console.log(resp, "Soy la respuesta")
-        }
-
-    } catch (err) {
-        res.send(err)
-    }
-}
 
 
-// ELIMINAR UN SPORTSCENTER(solo puede hacerlo el admin)
-userController.deleteSportscenter = async (req, res) => {
-    try{
-        let name = req.params.name
-        let resp = await models.sportscenters.destroy({
-            where: { name: name }
-        })
 
-        if(resp == 1) {
-            res.send("Se ha eliminado el sportscenter correctamente")
-        } else {
-            res.send("No se ha podido eliminar el sportscenter")
-        }
 
-    } catch(err) {
-
-    }
-}
 
 
 module.exports = userController;
