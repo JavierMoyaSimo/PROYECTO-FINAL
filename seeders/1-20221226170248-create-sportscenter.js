@@ -131,6 +131,15 @@ module.exports = {
         rings: "4",
         timetable: "Abierto de 8:00 a 20:00, todos los días del año.",
         dni: "233566889O",
+      },{
+        sportscenter_id: "PadelMoon",
+        description: "Practica al pádel en PadelMoon, situado en la población de Lugo. El club deportivo cuenta con 4 pistas de pádel donde podrás jugar a tu deporte favorito.",
+        phone: "687917607",
+        address: "Ruá do Cristal , 8 - Polígono del Ceao. 27003, Lugo",
+        province: "Lugo",
+        rings: "4",
+        timetable: "Abierto de 8:00 a 20:00, todos los días del año.",
+        dni: "2335668000",
       },
 
     ], {});

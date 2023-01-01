@@ -33,36 +33,34 @@ gameController.getGamesBySportscenter = async (req, res) => {
 // gameController.updateGame = async (req, res) => {
 //     try {
 //       let body = req.body;
-//       let movie = await models.games.findOne({
-//         where: { date: body.date },
+//       let game = await models.games.findOne({
+//         where: { game_id: body.game_id },
 //       });
-//       let orderedMovie = await models.orders.findOne({
+//       let bookingGame = await models.bookings.findOne({
 //         where: {
-//           articleIdArticle: movie.articleIdArticle,
+//           game_id: games.game_id,
 //         },
 //       });
 //       if (
 //         body.email === req.auth?.email &&
-//         movie.articleIdArticle === orderedMovie.articleIdArticle
+//         games.game_id === bookingGame.game_id
 //       ) {
-//         let resp = await models.orders.update(
+//         let resp = await models.bookings.update(
 //           {
-//             rentingDate: `${new Date().getFullYear()}-${
-//               new Date().getMonth() + 1
-//             }-${new Date().getDate()}`,
+//             players: players--,
 //           },
 //           {
 //             where: {
-//               articleIdArticle: orderedMovie.articleIdArticle,
+//               game_id: bookingGame.game_id,
 //             },
 //           }
 //         );
 //       }
 //       res.status(200).json({
-//         message: `Nueva fecha para la pelicula ${movie.title}`,
+//         message: `Ahora hay un jugador menos en el partido ${game.game_id}`,
 //       });
 //     } catch (error) {
-//       res.json({ message: "esta pelicula no esta en el pedido" });
+//       res.json({ message: "este partido no está en la reserva" });
 //       console.error(error);
 //     }
 //   };

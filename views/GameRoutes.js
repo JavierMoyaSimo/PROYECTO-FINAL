@@ -15,7 +15,7 @@ const db = require("../db/db");
 router.get("/", isValidRole("admin"), gameController.getGames);
 
 // MOSTRAR DATOS DE PARTIDOS SEGUN SPORTSCENTER
-router.get("/games/:sportscenterSportscenterId", isValidUser(), gameController.getGamesBySportscenter);
+router.get("/games/:sportscenterSportscenterId", gameController.getGamesBySportscenter);
 
 // MODIFICAR DATOS DE PARTIDO
 // router.put("/updateGame/:email", isValidUser(), gameController.updateGame);

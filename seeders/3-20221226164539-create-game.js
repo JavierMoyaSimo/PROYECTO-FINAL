@@ -38,6 +38,13 @@ module.exports = {
         level: "4",
         sportscenterSportscenterId: "Polideportivo Juan Antonio Samaranch",
 
+      },{
+        type: "teams",
+        players: "0",
+        date: "2023-01-20 20:00:00",
+        level: "4",
+        sportscenterSportscenterId: "PadelMoon",
+
       },
 
     ], {});
