@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true,
       primaryKey: true,
     },
-    game_id: {
+    gameGameId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
         key: "game_id",
       },
     },
-    user_id: {
+    userUserId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {

@@ -9,7 +9,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      game_id: {
+      gameGameId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
@@ -17,7 +17,7 @@ module.exports = {
           key: "game_id",
         },
       },
-      user_id: {
+      userUserId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
