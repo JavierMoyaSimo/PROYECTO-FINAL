@@ -5,14 +5,9 @@ module.exports = {
     await queryInterface.createTable('sportscenters', {
       sportscenter_id: {
         allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
-      },
-      name: {
-        allowNull: false,
-        type: Sequelize.STRING,
         unique: true,
+        type: Sequelize.STRING
       },
       description: {
         allowNull: false,
