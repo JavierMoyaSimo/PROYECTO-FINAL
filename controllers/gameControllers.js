@@ -1,5 +1,5 @@
 const models = require("../models/index");
-
+const { Op } = require('sequelize');
 const gameController = {};
 
 const { encryptPassword } = require("../services/auth.service");

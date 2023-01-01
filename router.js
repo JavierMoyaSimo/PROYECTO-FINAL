@@ -19,7 +19,7 @@ router.use("/users", UserRoutes);
 //middleware para las rutas de games
 router.use("/games", GameRoutes);
 // //middleware para las rutas de bookings
-// router.use("/bookings", BookingRoutes);
+router.use("/bookings", BookingRoutes);
 
 
 

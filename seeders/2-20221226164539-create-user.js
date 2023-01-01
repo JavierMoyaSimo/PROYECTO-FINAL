@@ -25,7 +25,7 @@ module.exports = {
       }, {
         name: "user2",
         email: "user2@gmail.com",
-        password: "FGFtB7/d4nWUvZVznuX99t18pYNkAqOU+20VGcYACGv2o+jsijjFQZar9ApIjR7T6fvwIoq5chS5VW4hKbYKNQ==",
+        password: "VrRopLekvEzv56DMSvCWyiwuNxlAxD2kfTmsr29YWIfHS2x17/RrJXx485IDzt8EJixPHFyS/S4hiMB/XK2EPA==",
         phone: "777222333",
         roleRoleId: "user",
         dni: "44527960K",
