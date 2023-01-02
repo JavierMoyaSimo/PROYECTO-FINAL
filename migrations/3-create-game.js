@@ -22,10 +22,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
-      level: {
-        allowNull: false,
-        type: Sequelize.INTEGER
-      },
       sportscenterSportscenterId: {
         type: Sequelize.STRING,
         allowNull: false,

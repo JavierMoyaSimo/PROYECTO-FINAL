@@ -29,7 +29,6 @@ bookingController.postNewBooking = async (req, res) => {
             })
             let repeated = await models.bookings.findOne({
                 where: {
-                    userUserId: req.auth.user_id,
                     gameGameId: game.game_id,
                 }
             })
@@ -45,7 +44,7 @@ bookingController.postNewBooking = async (req, res) => {
                 })
             } else {
                 res.json({
-                    message: "No se ha realizado la reserva, ya tienes este partido reservado"
+                    message: "No se ha realizado la reserva,  este partido ya ha sido reservado"
                 })
             }
         }
@@ -53,35 +52,7 @@ bookingController.postNewBooking = async (req, res) => {
         res.send(err)
     }
 }
-// //MODIFICAR DATOS DE UN PEDIDO              
-// bookingController.updateOrder = async (req, res) => {
-//     try {
-//         let body = req.body;
-//         let movie = await models.movies.findOne({
-//             where: { title: body.title }
-//         })
-//         let orderedMovie = await models.orders.findOne({
-//             where: {
-//                 articleIdArticle: movie.articleIdArticle,
-//             }
-//         })
-//         if (body.mail === req.auth?.mail && movie.articleIdArticle === orderedMovie.articleIdArticle) {
-//             let resp = await models.orders.update({
-//                 rentingDate: `${new Date().getFullYear()}-${new Date().getMonth() + 1}-${new Date().getDate()}`
-//             },
-//                 {
-//                     where: {
-//                         articleIdArticle: orderedMovie.articleIdArticle
-//                     }
-//                 })
-//         } res.status(200).json({
-//             message: `Nueva fecha para la pelicula ${movie.title}`
-//         })
-//     } catch (error) {
-//         res.json({ message: "esta pelicula no esta en el pedido" })
-//         console.error(error)
-//     }
-// }
+
 
 //MOSTRAR TODAS LAS RESERVAS DE UN USUARIO  
 bookingController.getBookingsByUser = async (req, res) => {

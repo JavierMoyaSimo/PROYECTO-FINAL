@@ -4,6 +4,7 @@ const {
   authBearerMiddleware,
   isValidRole,
   isValidUser,
+  // isValidDni
 } = require("../middlewares/authMiddleware");
 
 const gameController = require("../controllers/gameControllers");

@@ -12,6 +12,7 @@ module.exports = {
       gameGameId: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        unique: true,
         references: {
           model: "games",
           key: "game_id",

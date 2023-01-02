@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       games.belongsTo(models.sportscenters);
-      games.hasMany(models.bookings);
+      games.hasOne(models.bookings);
     }
   }
   games.init({
@@ -33,10 +33,6 @@ module.exports = (sequelize, DataTypes) => {
     },
     date: {
       type: DataTypes.DATE,
-      allowNull: false,
-    },
-    level: {
-      type: DataTypes.INTEGER,
       allowNull: false,
     },
     sportscenterSportscenterId: {

@@ -52,10 +52,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       unique: true,
     },
-    level: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
+    
   }, {
     sequelize,
     modelName: 'users',

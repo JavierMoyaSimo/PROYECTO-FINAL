@@ -38,10 +38,7 @@ module.exports = {
         unique: true,
         type: Sequelize.STRING
       },
-      level: {
-        allowNull: false,
-        type: Sequelize.INTEGER
-      },
+      
       // onDelete: 'cascade',
       // onUpdate: 'cascade'      
     });

@@ -17,9 +17,6 @@ router.get("/", isValidRole("admin"), bookingController.getBookings);
 // MOSTRAR DATOS DE RESERVAS SEGUN USUARIO
 router.get("/bookings/:userUserId", bookingController.getBookingsByUser);
 
-// // MODIFICAR DATOS DE RESERVA
-// // router.put("/updateBooking/:email", isValidUser(), bookingController.updateGame);
-
 // GENERAR NUEVA RESERVA
 router.post("/newBooking", isValidUser(), bookingController.postNewBooking);
 

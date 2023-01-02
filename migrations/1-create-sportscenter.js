@@ -33,7 +33,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
-      dni: {
+      cif: {
         allowNull: false,
         type: Sequelize.STRING,
         unique: true

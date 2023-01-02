@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    dni: {
+    cif: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true

@@ -1,5 +1,6 @@
 const jsonwebtoken = require("jsonwebtoken")
 
+const models = require('../models/index')
 
 // MIDDLEWARE AUTENTICACION DE TOKEN
 const authBearerMiddleware = async (req, res, next) => {
@@ -24,15 +25,15 @@ const authBearerMiddleware = async (req, res, next) => {
 const isValidRole = (roleRoleId) => (req, res, next) => {
   console.log(req.auth, "esto es simplemente el auth")
   if (req.auth?.roleRoleId === roleRoleId) {
-    
+
     next()
   } else {
     res.status(403).json({ message: "You are not authorized2" })
-    
+
     console.log(roleRoleId, "Este es el rolRoleId")
     // console.log(payload, "esteespayload")
     console.log(req.auth?.roleRoleId, "Este es el del auth")
-    
+
   }
 }
 
@@ -47,8 +48,41 @@ const isValidUser = (email) => async (req, res, next) => {
   }
 }
 
+
+
+
+// const isValidDni = (sportscenterid) => async (req, res, next) => {
+//   const getsportcenterById = async (req, res) => {
+    
+//     try {
+//       console.log("resprespresp", req.body)
+//       let sportscenterid = req.body.sportscenterSportscenterId
+//       console.log(sportscenterid, "jejeje")
+//       let resp = await models.sportscenters.findAll({
+//         where: { sportscenter_id: sportscenterid }
+        
+//       })
+//       console.log("Soy la resp11 de la function" , resp)
+//       res.send(resp)
+//       console.log("Soy la resp de la function" , resp)
+//     } catch (err) {
+//       console.log(req.body.sportscenterSportscenterId)
+//       res.send(err)    
+//     }
+//   }
+
+//   getsportcenterById();
+//   let sportscenter_dni = getsportcenterById.resp?.dni
+//   if (req.auth?.dni === sportscenter_dni) {
+//     next()
+//   } else {
+//     res.status(403).json({ message: "You are not authorizedDNI" })
+//   }
+// }
+
 module.exports = {
   authBearerMiddleware,
   isValidRole,
-  isValidUser
+  isValidUser,
+  // isValidDni
 };

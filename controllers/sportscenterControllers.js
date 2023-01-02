@@ -11,6 +11,9 @@ sportscenterController.getSportscenters = async (req, res) => {
 }
 
 
+// AQUI nuevo con dni
+
+
 //SPORTSCENTER SEGUN SU ID
 sportscenterController.getsportcenterById = async (req, res) => {
     try {

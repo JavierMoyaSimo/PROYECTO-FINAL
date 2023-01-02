@@ -45,8 +45,7 @@ userController.updateUser = async (req, res) => {
     {
       name: user.name,
       password: newPassword,
-      phone: user.phone,
-      level: user.level,
+      phone: user.phone
       
     },
     {

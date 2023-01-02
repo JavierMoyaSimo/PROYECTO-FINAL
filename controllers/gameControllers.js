@@ -2,6 +2,8 @@ const models = require("../models/index");
 const { Op } = require('sequelize');
 const gameController = {};
 
+
+
 const { encryptPassword } = require("../services/auth.service");
 require("dotenv").config();
 
@@ -29,45 +31,12 @@ gameController.getGamesBySportscenter = async (req, res) => {
     }
 };
 
-// MODIFICAR DATOS DE PARTIDO
-// gameController.updateGame = async (req, res) => {
-//     try {
-//       let body = req.body;
-//       let game = await models.games.findOne({
-//         where: { game_id: body.game_id },
-//       });
-//       let bookingGame = await models.bookings.findOne({
-//         where: {
-//           game_id: games.game_id,
-//         },
-//       });
-//       if (
-//         body.email === req.auth?.email &&
-//         games.game_id === bookingGame.game_id
-//       ) {
-//         let resp = await models.bookings.update(
-//           {
-//             players: players--,
-//           },
-//           {
-//             where: {
-//               game_id: bookingGame.game_id,
-//             },
-//           }
-//         );
-//       }
-//       res.status(200).json({
-//         message: `Ahora hay un jugador menos en el partido ${game.game_id}`,
-//       });
-//     } catch (error) {
-//       res.json({ message: "este partido no está en la reserva" });
-//       console.error(error);
-//     }
-//   };
+
 
 // REGISTRAR NUEVO PARTIDO(solo puede hacerlo el sportscenteradmin)
 gameController.postNewGame = async (req, res) => {
     try {
+
         let data = req.body
         let resp = await models.games.create({
             type: data.type,
