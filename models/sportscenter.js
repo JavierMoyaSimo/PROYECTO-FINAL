@@ -28,6 +28,10 @@ module.exports = (sequelize, DataTypes) => {
     phone: {
       type: DataTypes.STRING,
       allowNull: false,
+      isNumeric: true,
+      validate: {
+        len: [9, 9]
+      }
     },
     address: {
       type: DataTypes.STRING,
@@ -39,7 +43,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     rings: {
       type: DataTypes.INTEGER,
-      allowNull: false,},
+      allowNull: false,
+      isNumeric: true,
+    },
     timetable: {
       type: DataTypes.STRING,
       allowNull: false,

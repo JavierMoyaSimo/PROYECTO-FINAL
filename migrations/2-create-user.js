@@ -11,11 +11,16 @@ module.exports = {
       },
       name: {
         allowNull: false,
+        isAlpha: true,
+      validate: {
+        len: [1, 20]
+      },
         type: Sequelize.STRING
       },
       email: {
         allowNull: false,
         unique: true,
+        isEmail: true,
         type: Sequelize.STRING
       },
       password: {
@@ -24,6 +29,10 @@ module.exports = {
       },
       phone: {
         allowNull: false,
+        isNumeric: true,
+      validate: {
+        len: [9, 9]
+      },
         type: Sequelize.STRING
       },
       roleRoleId: {

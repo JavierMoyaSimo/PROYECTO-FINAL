@@ -15,6 +15,10 @@ module.exports = {
       },
       phone: {
         allowNull: false,
+        isNumeric: true,
+        validate: {
+          len: [9, 9]
+        },
         type: Sequelize.STRING
       },
       address: {
@@ -23,10 +27,14 @@ module.exports = {
       },
       province: {
         allowNull: false,
+        validate: {
+          len: [2, 30]
+        },
         type: Sequelize.STRING
       },
       rings: {
         allowNull: false,
+        isNumeric: true,
         type: Sequelize.INTEGER
       },
       timetable: {
