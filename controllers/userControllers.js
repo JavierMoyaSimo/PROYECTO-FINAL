@@ -66,7 +66,7 @@ userController.deleteUser = async (req, res) => {
       where: { email: email },
     });
     res.json({ resp, message: "Se ha elminado el usuario correctamente" });
-  } catch (err) {}
+  } catch (err) {console.log(err)}
 };
 
 

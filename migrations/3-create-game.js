@@ -29,9 +29,11 @@ module.exports = {
           model: "sportscenters",
           key: "sportscenter_id",
         },
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
       },
-      // onDelete: 'cascade',
-      // onUpdate: 'cascade'
+
+
     });
   },
   async down(queryInterface, Sequelize) {

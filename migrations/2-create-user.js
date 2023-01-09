@@ -12,9 +12,9 @@ module.exports = {
       name: {
         allowNull: false,
         isAlpha: true,
-      validate: {
-        len: [1, 20]
-      },
+        validate: {
+          len: [1, 20]
+        },
         type: Sequelize.STRING
       },
       email: {
@@ -30,9 +30,9 @@ module.exports = {
       phone: {
         allowNull: false,
         isNumeric: true,
-      validate: {
-        len: [9, 9]
-      },
+        validate: {
+          len: [9, 9]
+        },
         type: Sequelize.STRING
       },
       roleRoleId: {
@@ -40,16 +40,18 @@ module.exports = {
         references: {
           model: 'roles',
           key: 'role_id'
-        }
+        },
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
       },
       dni: {
         allowNull: false,
         unique: true,
         type: Sequelize.STRING
       },
-      
-      // onDelete: 'cascade',
-      // onUpdate: 'cascade'      
+
+
+
     });
   },
   async down(queryInterface, Sequelize) {

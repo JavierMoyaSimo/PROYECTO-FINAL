@@ -17,6 +17,8 @@ module.exports = {
           model: "games",
           key: "game_id",
         },
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
       },
       userUserId: {
         type: Sequelize.INTEGER,
@@ -25,9 +27,10 @@ module.exports = {
           model: "users",
           key: "user_id",
         },
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
       },
-      // onDelete: 'cascade',
-      // onUpdate: 'cascade'
+
     });
   },
   async down(queryInterface, Sequelize) {
