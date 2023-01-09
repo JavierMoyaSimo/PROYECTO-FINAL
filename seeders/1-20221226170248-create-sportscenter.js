@@ -14,7 +14,7 @@ module.exports = {
         rings: "8",
         timetable: "Abierto de 9:00 a 21:00, todos los días del año.",
         cif: "11111111A",
-        image: "../images/valencia-tenniscenter.PNG",
+        image: "https://i.ytimg.com/vi/Xh1eDaj4MK8/maxresdefault.jpg",
       }, {
         sportscenter_id: "Tutempo K7",
         description: "TUTEMPO K7 Fitness Spa-Club está situado en Paterna, a escasos kilómetros de Valencia y con fácil acceso desde la A7.Alberga 9 pistas de pádel, y dispone de servicio de cafetería y restauración.",
@@ -24,7 +24,7 @@ module.exports = {
         rings: "9",
         timetable: "Abierto de 8:00 a 22:00,todos los días, ininterrumpidamente",
         cif: "22222222B",
-        image: "../images/tutempo-k7.PNG",
+        image: "https://img.grouponcdn.com/deal/mJTeNzLPseUnSxPTp7VU/e8-960x576/v1/c870x524.jpg",
       }, {
         sportscenter_id: "Polideportivo Juan Antonio Samaranch",
         description: "También conocido como enjoy! Samarach, se encuentra situado en Valencia. Las instalaciones del Polideportivo Juan Antonio Samaranch están equipadas con 11 pistas de pádel.",
@@ -34,7 +34,7 @@ module.exports = {
         rings: "11",
         timetable: "Abierto de 10:00 a 20:00, todos los días, ininterrumpidamente",
         cif: "33333333C",
-        image: "../images/juan-antonio.PNG",
+        image: "http://www.fdmvalencia.es/wp-content/uploads/2015/03/Juan_Antonio_Samaranch_05-960x450.jpg",
       }, {
         sportscenter_id: "Club tenis Andrés Gimeno",
         description: "Fundado en el año 1974, el Club de Tennis Andrés Gimeno dispone de un complejo deportivo de 22.000 metros cuadrados con todo tipo de instalaciones deportivas con un especial énfasis en el pádel (11 pistas).",
@@ -44,7 +44,7 @@ module.exports = {
         rings: "11",
         timetable: "Abierto de lunes a domingo de 8 a 22.30 horas.",
         cif: "44444444D",
-        image: "../images/Andres-gimeno.PNG",
+        image: "https://res.cloudinary.com/playtomic/image/upload/c_limit,w_1600/v1/pro/tenants/c298e17c-a739-4d12-8e8e-31889580817d/tenisgimeno_0001",
       }, {
         sportscenter_id: "Padel indoor Hospitalet",
         description: "Juega al pádel en Pádel Indoor Hospitalet, situado en la población de Hospitalet de Llobregat. El centro deportivo cuenta con 6 pistas de pádel donde podrás practicar el deporte que más te engancha.",
@@ -54,7 +54,7 @@ module.exports = {
         rings: "6",
         timetable: "Abierto de 9:00 a 22:00, todos los días del año, ininterrumpidamente",
         cif: "555555555E",
-        image: "../images/indoor-hospitalet.PNG",
+        image: "https://www.padelindoorhospitalet.com/images.ashx?id=baeff2ab9add22904cb89e7ed25a24e5",
       }, {
         sportscenter_id: "Club deportivo republic space",
         description: "Centro con gran variedad en deportes; cuenta con 28 pistas de pádel, entre pistas de cristal, muro cubiertas e individuales. Además de pistas de tenis, zona de cafetería/vending y tienda deportiva.",
@@ -64,7 +64,7 @@ module.exports = {
         rings: "28",
         timetable: "Abierto de 7:00 a 22:00, ininterrumpidamente",
         cif: "66666666F",
-        image: "../images/republic-space.PNG",
+        image: "https://www.padelen.com/assets/images/instalacion/medium/Club-Deportivo-Republic-Space.jpg",
       }, {
         sportscenter_id: "Complejo deportivo Somontes",
         description: "El complejo deportivo Somontes se encuentra en un entorno natural privilegiado: El Monte del Pardo en Madrid. Sus cuidados jardines y zonas verdes, junto a encinas, fresnos y olmos centenarios, constituyen un ambiente ideal para la práctica deportiva, el ocio y el entretenimiento familiar, sin olvidar sus prestigiosos restaurantes, marco ideal para todo tipo de celebraciones.",
@@ -74,7 +74,7 @@ module.exports = {
         rings: "21",
         timetable: "Abierto de 8:00 a 21:00, todos los días.",
         cif: "77777777B",
-        image: "../images/somontes.PNG",
+        image: "https://clubdeportivosomontes.com/wp-content/uploads/2019/09/af.jpg",
       }, {
         sportscenter_id: "La red 21 Padel Center",
         description: "La Red 21 Pádel Center se encuentra en Alcalá de Guadaira, Sevilla. Entre sus instalaciones cuenta con un total de 17 pistal de padel, (1 individual) gimnasio, sala de fisioterapia, sala de belleza, zona de descanso y escuela.",
@@ -84,7 +84,7 @@ module.exports = {
         rings: "21",
         timetable: "Abierto de 10:00 a 21:00, de lunes a domingo",
         cif: "88888888J",
-        image: "../images/red-21.PNG",
+        image: "https://media.pistaenjuego.ovh/images/center/4/6/9/l.la-red-21-padel-center-2_1347890964.jpg",
       }, {
         sportscenter_id: "Club de padel Casablanca",
         description: "El club de pádel Casablanca se encuentra en la entrada de Utrera, en la urbanización Casablanca. El club cuenta con 8 pistas de pádel en el Camino 3 y 7 pistas en la calle Aerodinámica del Polígono Carretera Amarilla.",
@@ -94,7 +94,7 @@ module.exports = {
         rings: "15",
         timetable: "Abierto de 9:00 a 21:00, ininterrumpidamente",
         cif: "99999999K",
-        image: "../images/casablanca.PNG",
+        image: "https://padelmagazine.fr/wp-content/uploads/2019/06/casablanca-oasis-padel.jpg.webp",
       }, {
         sportscenter_id: "Club padel Murcia",
         description: "El club Pádel Murcia nace en un marco incomparable, perfectamente ubicado en Guadalupe. Cuenta con 12 pistas de pádel, zona de infantil y una sala de musculación, cardiovascular y Cycle Indoor.",
@@ -104,7 +104,7 @@ module.exports = {
         rings: "12",
         timetable: "Abierto de 10:00 a 22:00,  365 días del año.",
         cif: "11111113L",
-        image: "../images/club-padel-murcia.PNG",
+        image: "https://www.clubpadelnuestro.es/wp-content/uploads/2016/09/Pistas-de-Padel-Murcia.jpg",
       },{
         sportscenter_id: "Soccer World Asturias",
         description: "Disfruta jugando al pádel en las 10 pistas de pádel que Soccer World Asturias pone a tu alcance. Las instalaciones se encuentran situadas en la localidad de Gijón.",
@@ -114,7 +114,7 @@ module.exports = {
         rings: "10",
         timetable: "Abierto de 9:00 a 21:00, todos los días del año.",
         cif: "23454565H",
-        image: "../images/soccer-world.PNG",
+        image: "https://www.soccerworldsports.org/assets/img/asturias/padel/padelast4.jpg",
       },{
         sportscenter_id: "Padel Oviedo",
         description: "El centro deportivo cuenta con 7 pistas de pádel donde podrás practicar el deporte que más te engancha.",
@@ -124,7 +124,7 @@ module.exports = {
         rings: "10",
         timetable: "Abierto de 8:00 a 20:00, ininterrumpidamente.",
         cif: "555677888K",
-        image: "../images/padel-oviedo.PNG",
+        image: "https://res.cloudinary.com/playtomic/image/upload/c_limit,w_1600/v1/pro/tenants/da7aaac2-43b3-11e8-8674-52540049669c/padeloviedo_0001",
       },{
         sportscenter_id: "Más que padel Lugo",
         description: "Disfruta jugando al pádel en las 6 pistas de pádel que Más Que Pádel Lugo pone a tu disposición. Las instalaciones se encuentran ubicadas en la localidad de Lugo.",
@@ -134,7 +134,7 @@ module.exports = {
         rings: "6",
         timetable: "Abierto de 9:00 a 21:00, ininterrumpidamente.",
         cif: "34343434O",
-        image: "../images/mas-que-padel.PNG",
+        image: "https://media.pistaenjuego.ovh/images/center/8/2/0/l.mas-que-padel-qpadel-lugo-2_1369723028.jpg",
       },{
         sportscenter_id: "Padel nuestro Lugo",
         description: "Practica al pádel en Pádel Nuestro Lugo, situado en la población de Lugo. El club deportivo cuenta con 4 pistas de pádel donde podrás jugar a tu deporte favorito.",
@@ -144,7 +144,7 @@ module.exports = {
         rings: "4",
         timetable: "Abierto de 8:00 a 20:00, todos los días del año.",
         cif: "233566889O",
-        image: "../images/padel-nuestro.PNG",
+        image: "https://padelnuestro-lugo.com/wp-content/uploads/2018/02/Padel-nuestro-Lugo-4.jpg",
       },{
         sportscenter_id: "PadelMoon",
         description: "Practica al pádel en PadelMoon, situado en la población de Lugo. El club deportivo cuenta con 4 pistas de pádel donde podrás jugar a tu deporte favorito.",
@@ -154,7 +154,7 @@ module.exports = {
         rings: "4",
         timetable: "Abierto de 8:00 a 20:00, todos los días del año.",
         cif: "12345678S",
-        image: "../images/padelmoon.PNG",
+        image: "https://lh5.googleusercontent.com/p/AF1QipMKM5_HI8T11fuDhBUZeQEntQmitXA-iyR_PU4E",
       },
 
     ], {});
