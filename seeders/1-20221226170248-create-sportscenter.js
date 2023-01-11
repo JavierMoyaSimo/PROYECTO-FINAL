@@ -154,7 +154,7 @@ module.exports = {
         rings: "4",
         timetable: "Abierto de 8:00 a 20:00, todos los días del año.",
         cif: "12345678S",
-        image: "https://lh5.googleusercontent.com/p/AF1QipMKM5_HI8T11fuDhBUZeQEntQmitXA-iyR_PU4E",
+        image: "https://padelmanager.com/media/gallery/clubs/original/d7/d7e2e4bd9c7e3e43f54da0c69204f0b26877c2c4.jpg?pdr=0.7",
       },
 
     ], {});

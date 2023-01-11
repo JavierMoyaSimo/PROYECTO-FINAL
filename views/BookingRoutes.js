@@ -18,7 +18,7 @@ router.get("/", isValidRole("admin"), bookingController.getBookings);
 router.get("/bookings/:userUserId", bookingController.getBookingsByUser);
 
 // GENERAR NUEVA RESERVA
-router.post("/newBooking", isValidUser(), bookingController.postNewBooking);
+router.post("/newBooking",  bookingController.postNewBooking);
 
 //BORRAR UNA RESERVA
 router.delete( "/deleteBooking/:booking_id",  isValidRole("sportscenteradmin"), bookingController.deleteBooking);

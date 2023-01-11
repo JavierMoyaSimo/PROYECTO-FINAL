@@ -46,6 +46,7 @@ sportscenterController.getSportscentersByProvince = async (req, res) => {
 sportscenterController.postNewSportscenter = async (req, res) => {
     try {
         let data = req.body
+        // if(!data.name){...}
         let resp = await models.sportscenters.create({
             name: data.name,
             description: data.description,
@@ -58,12 +59,15 @@ sportscenterController.postNewSportscenter = async (req, res) => {
 
         })
 
-        if (resp ) {
-            res.send("Se ha registrado el sportscenter correctamente")
-        } else {
-            res.send("No se ha podido registar el sportscenter")
-            console.log(resp, "Soy la respuesta")
+        if (!resp) {
+            return res.send("No se ha podido registar el sportscenter")
+            // res.send("Se ha registrado el sportscenter correctamente")
         }
+        return res.send("Se ha registrado el sportscenter correctamente")
+        //  else {
+        //     res.send("No se ha podido registar el sportscenter")
+        //     console.log(resp, "Soy la respuesta")
+        // }
 
     } catch (err) {
         res.send(err)
@@ -72,19 +76,19 @@ sportscenterController.postNewSportscenter = async (req, res) => {
 
 // ELIMINAR UN SPORTSCENTER(solo puede hacerlo el admin)
 sportscenterController.deleteSportscenter = async (req, res) => {
-    try{
+    try {
         let name = req.params.name
         let resp = await models.sportscenters.destroy({
             where: { name: name }
         })
 
-        if(resp == 1) {
+        if (resp == 1) {
             res.send("Se ha eliminado el sportscenter correctamente")
         } else {
             res.send("No se ha podido eliminar el sportscenter")
         }
 
-    } catch(err) {
+    } catch (err) {
 
     }
 }

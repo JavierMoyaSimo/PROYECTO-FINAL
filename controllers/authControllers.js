@@ -85,7 +85,7 @@ const authLoginController = async (req, res) => {
             name: userFound.name,
             email: userFound.email,
             dni: userFound.dni,
-            level: userFound.level,
+            phone: userFound.phone,
             roleRoleId: userFound.roleRoleId.toLowerCase()
         }, secret);
         res.status(200).json({
@@ -95,7 +95,7 @@ const authLoginController = async (req, res) => {
             name: userFound.name,
             email: userFound.email,
             dni: userFound.dni,
-            level: userFound.level,
+            phone: userFound.phone,
             roleRoleId: userFound.roleRoleId
 
         })

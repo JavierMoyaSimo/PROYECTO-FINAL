@@ -21,12 +21,13 @@ bookingController.getBookings = async (req, res) => {
 bookingController.postNewBooking = async (req, res) => {
     try {
         let body = req.body;
-        
+
 
         if (body.email === req.auth?.email) {
             let game = await models.games.findOne({
                 where: { game_id: body.game_id }
             })
+            //if(!game){}...
             let repeated = await models.bookings.findOne({
                 where: {
                     gameGameId: game.game_id,
@@ -43,13 +44,16 @@ bookingController.postNewBooking = async (req, res) => {
                     message: "Tu reserva se ha realizado correctamente"
                 })
             } else {
-                res.json({
+                //return
+                return res.json({
                     message: "No se ha realizado la reserva,  este partido ya ha sido reservado"
                 })
             }
         }
+        //else {return...}
+       return res.json({ hola: "hola" });
     } catch (err) {
-        res.send(err)
+       return res.send(err)
     }
 }
 
@@ -57,13 +61,13 @@ bookingController.postNewBooking = async (req, res) => {
 //MOSTRAR TODAS LAS RESERVAS DE UN USUARIO  
 bookingController.getBookingsByUser = async (req, res) => {
     let resp = await models.bookings.findAll({
-      where: {
-        userUserId: req.auth.user_id
-      }
+        where: {
+            userUserId: req.auth.user_id
+        }
     })
     res.status(200).json({
-      resp,
-      message: "Aquí estan tus reservas "
+        resp,
+        message: "Aquí estan tus reservas "
     })
 }
 
@@ -71,8 +75,8 @@ bookingController.getBookingsByUser = async (req, res) => {
 
 //BORRAR UNA RESERVA
 bookingController.deleteBooking = async (req, res) => {
-    try{
-        let {booking_id} = req.params
+    try {
+        let { booking_id } = req.params
         let resp = await models.bookings.destroy({
             where: { booking_id: booking_id }
         });
@@ -80,7 +84,7 @@ bookingController.deleteBooking = async (req, res) => {
         res.json({ resp, message: "Se ha elminado el partido correctamente" });
     } catch (err) { }
 };
-  
+
 
 
 
