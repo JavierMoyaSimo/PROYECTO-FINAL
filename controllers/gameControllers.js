@@ -42,7 +42,6 @@ gameController.postNewGame = async (req, res) => {
             type: data.type,
             players: data.players,
             date: data.date,
-            level: data.level,
             sportscenterSportscenterId: data.sportscenterSportscenterId,
             
         })
