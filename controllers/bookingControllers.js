@@ -45,15 +45,15 @@ bookingController.postNewBooking = async (req, res) => {
                 })
             } else {
                 //return
-                return res.json({
+                 res.json({
                     message: "No se ha realizado la reserva,  este partido ya ha sido reservado"
                 })
             }
         }
         //else {return...}
-       return res.json({ hola: "hola" });
+    //    return res.json({ hola: "hola" });
     } catch (err) {
-       return res.send(err)
+        res.send(err)
     }
 }
 
