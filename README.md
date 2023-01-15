@@ -47,14 +47,14 @@
 
 * **express**: Framework de node js.
 
-```
+
 
 * **sequelize**: Para conectarnos y manipular nuestra bbdd.
 
-```
+
 
 * **jsonwebtoken**: Instalamos jsonwebtoken en nuestro proyecto para gestionar uso de tokens:
-```
+
 
 
 
@@ -148,11 +148,11 @@ Usamos el modelo vista-controlador para estructurar el proyecto.
     ```
 
 * **.gitignore**: Archivo en el que se indica que archivos no se subirán a nuestro repositorio. Está editado de la siguiente manera:
-```
+
 /node_modules
 .env
 /config/config.json
-```
+
 
 ## Explicación de la securización de la API:
 - En primer lugar, un usuario se registrará(entre otras cosas, con su email y password).
