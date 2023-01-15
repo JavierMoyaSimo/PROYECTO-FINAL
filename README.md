@@ -48,7 +48,9 @@
 * **express**: Framework de node js.
 
 ```
-* **sequelize**: Instalamos sequelize en nuestro proyecto, haciendo que podamos conectarnos y manipular la base de datos.
+
+* **sequelize**: Para conectarnos y manipular nuestra bbdd.
+
 ```
 
 * **jsonwebtoken**: Instalamos jsonwebtoken en nuestro proyecto para gestionar uso de tokens:
