@@ -46,7 +46,7 @@ sportscenterController.getSportscentersByProvince = async (req, res) => {
 sportscenterController.postNewSportscenter = async (req, res) => {
     try {
         let data = req.body
-        // if(!data.name){...}
+        
         let resp = await models.sportscenters.create({
             name: data.name,
             description: data.description,
@@ -61,13 +61,10 @@ sportscenterController.postNewSportscenter = async (req, res) => {
 
         if (!resp) {
             return res.send("No se ha podido registar el sportscenter")
-            // res.send("Se ha registrado el sportscenter correctamente")
+           
         }
         return res.send("Se ha registrado el sportscenter correctamente")
-        //  else {
-        //     res.send("No se ha podido registar el sportscenter")
-        //     console.log(resp, "Soy la respuesta")
-        // }
+        
 
     } catch (err) {
         res.send(err)
