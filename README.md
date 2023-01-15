@@ -2,7 +2,7 @@
 
 ## El proyecto consiste en una web en la cual podremos reservar partidos en diferentes centros de padel.
 ***
-<img src="./img/ddbb-padel.PNG" width="600em"/><br>
+<img src="../PROYECTO-FINAL/img/ddbb-padel.PNG" width="600em"/><br>
 ***
 
 
