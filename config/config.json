@@ -1,11 +1,11 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
-    "database": "padel",
-    "host": "127.0.0.1",
+    "password": "t71BKkY8HphADA0uuWto",
+    "database": "railway",
+    "host": "containers-us-west-16.railway.app",
     "dialect": "mysql",
-    "port": "3306"
+    "port": "7991"
   },
   "test": {
     "username": "root",
@@ -16,10 +16,10 @@
   },
   "production": {
     "username": "root",
-    "password": "root",
-    "database": "padel",
-    "host": "127.0.0.1",
+    "password": "t71BKkY8HphADA0uuWto",
+    "database": "railway",
+    "host": "containers-us-west-16.railway.app",
     "dialect": "mysql",
-    "port": "3308"
+    "port": "7991"
   }
 }
