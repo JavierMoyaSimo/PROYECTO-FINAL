@@ -11,10 +11,10 @@ require("dotenv").config();
 gameController.getGames = async (req, res) => {
     try {
         models.games.findAll().then((resp) => {
-            res.send(resp);
+          return  res.send(resp);
         });
     } catch (error) {
-        res.send(error);
+      return  res.send(error);
     }
 };
 
@@ -25,9 +25,9 @@ gameController.getGamesBySportscenter = async (req, res) => {
         let resp = await models.games.findAll({
             where: { sportscenterSportscenterId: sportscenterSportscenterId },
         });
-        res.send(resp);
+      return  res.send(resp);
     } catch (err) {
-        res.send(err);
+       return res.send(err);
     }
 };
 
@@ -47,14 +47,14 @@ gameController.postNewGame = async (req, res) => {
         })
 
         if (resp ) {
-            res.send("Se ha creado el partido correctamente")
+        return    res.send("Se ha creado el partido correctamente")
         } else {
-            res.send("No se ha podido registar el partido")
-            console.log(resp, "Soy la respuestadelpartit")
+         return   res.send("No se ha podido registar el partido")
+           
         }
 
     } catch (err) {
-        res.send(err)
+      return  res.send(err)
     }
 }
 
@@ -66,8 +66,10 @@ gameController.deleteGame = async (req, res) => {
         let resp = await models.games.destroy({
             where: { game_id: game_id },
         });
-        res.json({ resp, message: "Se ha elminado el partido correctamente" });
-    } catch (err) { }
+      return  res.json({ resp, message: "Se ha elminado el partido correctamente" });
+    } catch (err) {
+        return res.send(err)
+    }
 };
 
 

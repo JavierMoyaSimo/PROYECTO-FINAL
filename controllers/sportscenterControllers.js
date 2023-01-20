@@ -5,13 +5,17 @@ const sportscenterController = {}
 
 //LISTADO DE TODOS LOS SPORTSCENTERS
 sportscenterController.getSportscenters = async (req, res) => {
-    let resp = await models.sportscenters.findAll()
+    try {
+        let resp = await models.sportscenters.findAll()
 
-    res.send(resp)
+        return res.send(resp)
+    } catch (err) {
+        return res.send(err)
+    }
 }
 
 
-// AQUI nuevo con dni
+
 
 
 //SPORTSCENTER SEGUN SU ID
@@ -21,9 +25,9 @@ sportscenterController.getsportcenterById = async (req, res) => {
         let resp = await models.sportscenters.findAll({
             where: { sportscenter_id: sportscenter_id }
         })
-        res.send(resp)
+        return res.send(resp)
     } catch (err) {
-        res.send(err)
+        return res.send(err)
     }
 }
 
@@ -36,9 +40,9 @@ sportscenterController.getSportscentersByProvince = async (req, res) => {
                 province: { [Op.like]: "%" + province + "%" }
             }
         })
-        res.send(resp)
+        return res.send(resp)
     } catch (err) {
-        res.send(err)
+        return res.send(err)
     }
 }
 
@@ -46,7 +50,7 @@ sportscenterController.getSportscentersByProvince = async (req, res) => {
 sportscenterController.postNewSportscenter = async (req, res) => {
     try {
         let data = req.body
-        
+
         let resp = await models.sportscenters.create({
             name: data.name,
             description: data.description,
@@ -61,13 +65,13 @@ sportscenterController.postNewSportscenter = async (req, res) => {
 
         if (!resp) {
             return res.send("No se ha podido registar el sportscenter")
-           
+
         }
         return res.send("Se ha registrado el sportscenter correctamente")
-        
+
 
     } catch (err) {
-        res.send(err)
+        return res.send(err)
     }
 }
 
@@ -80,13 +84,13 @@ sportscenterController.deleteSportscenter = async (req, res) => {
         })
 
         if (resp == 1) {
-            res.send("Se ha eliminado el sportscenter correctamente")
+            return res.send("Se ha eliminado el sportscenter correctamente")
         } else {
-            res.send("No se ha podido eliminar el sportscenter")
+            return res.send("No se ha podido eliminar el sportscenter")
         }
 
     } catch (err) {
-
+        return res.send(err)
     }
 }
 

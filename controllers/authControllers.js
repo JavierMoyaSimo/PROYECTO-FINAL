@@ -50,10 +50,10 @@ const authRegisterController = async (req, res) => {
             level: body.level,          
             
         });
-        res.status(201).json(UserCreated)
+     return   res.status(201).json(UserCreated)
     } catch (error) {
         console.error(error)
-        res.status(500).json({ message: error.message })
+        return res.status(500).json({ message: error.message })
     }
 }
 
@@ -88,7 +88,7 @@ const authLoginController = async (req, res) => {
             phone: userFound.phone,
             roleRoleId: userFound.roleRoleId.toLowerCase()
         }, secret);
-        res.status(200).json({
+        return res.status(200).json({
             message: "Login successful", 
             jwt: jwt,
             user_id: userFound.user_id,
@@ -100,7 +100,7 @@ const authLoginController = async (req, res) => {
 
         })
     } catch (error) {
-        res.send(error)
+       return res.send(error)
     }
 
 }

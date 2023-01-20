@@ -9,10 +9,10 @@ const bookingController = {}
 bookingController.getBookings = async (req, res) => {
     try {
         models.bookings.findAll().then((resp) => {
-            res.send(resp);
+            return res.send(resp);
         });
     } catch (error) {
-        res.send(error);
+        return res.send(error);
     }
 };
 
@@ -38,37 +38,40 @@ bookingController.postNewBooking = async (req, res) => {
                     userUserId: req.auth.user_id,
                     gameGameId: game.game_id
                 })
-                res.status(200).json({
+                return res.status(200).json({
                     resp,
                     email: req.auth?.email,
                     message: "Tu reserva se ha realizado correctamente"
                 })
             } else {
-                //return
-                 res.json({
+                return
+                res.json({
                     message: "No se ha realizado la reserva,  este partido ya ha sido reservado"
                 })
             }
         }
-        //else {return...}
-    //    return res.json({ hola: "hola" });
+
     } catch (err) {
-        res.send(err)
+        return res.send(err)
     }
 }
 
 
 //MOSTRAR TODAS LAS RESERVAS DE UN USUARIO  
 bookingController.getBookingsByUser = async (req, res) => {
-    let resp = await models.bookings.findAll({
-        where: {
-            userUserId: req.auth.user_id
-        }
-    })
-    res.status(200).json({
-        resp,
-        message: "Aquí estan tus reservas "
-    })
+    try {
+        let resp = await models.bookings.findAll({
+            where: {
+                userUserId: req.auth.user_id
+            }
+        })
+        return res.status(200).json({
+            resp,
+            message: "Aquí estan tus reservas "
+        })
+    } catch (err) {
+        return res.send(err)
+    }
 }
 
 
@@ -81,8 +84,10 @@ bookingController.deleteBooking = async (req, res) => {
             where: { booking_id: booking_id }
         });
 
-        res.json({ resp, message: "Se ha elminado el partido correctamente" });
-    } catch (err) { }
+       return res.json({ resp, message: "Se ha elminado el partido correctamente" });
+    } catch (err) {
+        return res.send(err)
+    }
 };
 
 
