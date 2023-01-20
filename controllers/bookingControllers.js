@@ -44,10 +44,11 @@ bookingController.postNewBooking = async (req, res) => {
                     message: "Tu reserva se ha realizado correctamente"
                 })
             } else {
-                return
+                
                 res.json({
                     message: "No se ha realizado la reserva,  este partido ya ha sido reservado"
                 })
+                return
             }
         }
 
